@@ -1,0 +1,13 @@
+name: Hello World Workflow  # Workflow name (visible in the Actions tab)
+
+on:
+  push:
+    branches: [ "main" ]  # Trigger on pushes to the 'main' branch
+
+jobs:
+  say_hello:  # Job ID (must be unique within the workflow)
+    runs-on: ubuntu-latest  # Run this job on a GitHub-hosted Ubuntu runner
+
+    steps:
+      - name: Print Hello World  # Step name (visible in workflow logs)
+        run: echo "Hello World!"  # Shell command to execute
